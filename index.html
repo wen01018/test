@@ -1,0 +1,130 @@
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>不法侵害預防之危害辨識及風險評估表</title>
+<!-- for-mobile-apps -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+<div class="content">
+	<h1>不法侵害預防之危害辨識及風險評估表</h1>
+	<div class="main">
+		<form>
+			<h5>你的姓名</h5>
+				<input type="text" value="張二三" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '張二三';}" required="" id="nameValue">
+			<h5>你的電話(手機/分機)</h5>
+				<input type="text" value="0911xxxxxx" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '0911xxxxxx';}" required="" id="phoneValue">
+			<h5>請選擇部門/學院</h5>
+				<select id="deparValue" onchange="changeCollege(this.selectedIndex)"></select>
+				<br>
+				<br>
+			<h5>請選擇單位/系所</h5>
+				<select id="unitValue"></select>	
+		</form>	
+		<br/>
+		<h5>是否有外部不法侵害之風險</h5>
+		<h5><from>
+		    <input type="radio" name="exvo" value="是" required id="exvoValue"/> 是 
+		    <input type="radio" name="exvo" value="否" checked id="exvoValue" /> 否
+		</from>	</h5> 
+		<br/>
+		<h5>是否有內部不法侵害之風險</h5>
+		<h5><from>
+		    <input type="radio" name="wovo" value="是" required id="wovoValue"/> 是 
+		    <input type="radio" name="wovo" value="否" checked id="wovoValue" /> 否
+		</from>	</h5> 
+		<br/>
+	
+		<h5>Our Support</h5>
+			<div class="radio-btns">
+					<div class="swit">								
+						<div class="check_box_one"> <div class="radio2"> <label><input type="radio" name="radio2" checked=""><i></i>Very Good</label> </div></div>
+                        <div class="check_box"> <div class="radio2"> <label><input type="radio" name="radio2"><i></i>Good</label> </div></div>
+						<div class="check_box"> <div class="radio2"> <label><input type="radio" name="radio2"><i></i>Fair</label> </div></div>
+						<div class="check_box"> <div class="radio2"> <label><input type="radio" name="radio2"><i></i>Poor</label> </div></div>
+						<div class="clear"></div>
+					</div>
+			</div>
+		<h5>Overall Satisfaction</h5>
+			<div class="radio-btns">
+					<div class="swit">								
+						<div class="check_box_one"> <div class="radio3"> <label><input type="radio" name="radio3" checked=""><i></i>Very Good</label> </div></div>
+                        <div class="check_box"> <div class="radio3"> <label><input type="radio" name="radio3"><i></i>Good</label> </div></div>
+						<div class="check_box"> <div class="radio3"> <label><input type="radio" name="radio3"><i></i>Fair</label> </div></div>
+						<div class="check_box"> <div class="radio3"> <label><input type="radio" name="radio3"><i></i>Poor</label> </div></div>
+						<div class="clear"></div>
+					</div>
+			</div>
+		<h5>Want to rate with us for customer services?</h5>
+			<span class="starRating">
+				<input id="rating5" type="radio" name="rating" value="5">
+				<label for="rating5">5</label>
+				<input id="rating4" type="radio" name="rating" value="4">
+				<label for="rating4">4</label>
+				<input id="rating3" type="radio" name="rating" value="3" >
+				<label for="rating3">3</label>
+				<input id="rating2" type="radio" name="rating" value="2" checked>
+				<label for="rating2">2</label>
+				<input id="rating1" type="radio" name="rating" value="1">
+				<label for="rating1">1</label>
+			</span>
+		<form>	
+			<h5>Is there anything you would like to tell us?</h5>	
+				<textarea onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">Type here</textarea>
+				
+		</form>
+		<button>送出</button>
+	</div>
+	<p class="footer">&copy; 2016 Feedback Widget. All Rights Reserved | Design by <a href="http://w3layouts.com/"> W3layouts</a></p>
+</div>
+<script type="text/javascript">
+	var colleges=['文學院','理學院','工學院','電資學院','規劃與設計學院','管理學院','社會科學院','生科學院','醫學院','研究單位','行政單位'];
+	var collegeSelect=document.getElementById("deparValue");
+	var inner="";
+	for(var i=0;i<colleges.length;i++){
+		inner=inner+'<option value='+i+'>'+colleges[i]+'</option>';
+	}
+	collegeSelect.innerHTML=inner;
+	
+	
+	var sectors=new Array();
+	sectors[0]=['中文系 ','外文系' ,'歷史系' ,'台文系' ,'考古所' ,'多元文化研究中心'];
+	sectors[1]=['數學系 ','物理系','化學系','地科系','光電系','電漿所'];	
+	sectors[2]=['機械系','化工系',' 資源系 ','材料系 ',' 土木系 ','水利系 ',' 工科系 ',' 醫工所 ','系統系','航太系','環工系','測量系','海事所'];	
+	sectors[3]=['製造所 ',' 電機系 ',' 資工系 ','微電所 ','電通所 '];
+	sectors[4]=['建築系 ',' 都計系 ',' 工設系 ',' 創產所 ']
+	sectors[5]=['工資管系 ','資管所 ','交管系','企管系','國企所','會計系','財金所','統計系','國經所','體健休所'];
+	sectors[6]=['政治系 ',' 經濟系 ',' 教育所 ',' 法律系 ',' 心理學系'];
+	sectors[7]=['生科系 ',' 熱植所 ','生科產業系 ',];
+	sectors[8]=['醫學系','解剖所','生化所','生理所','微免所','藥理所','寄生蟲科','病理科','工衛科','公衛所','內科','外科','骨科','麻醉科','婦產科','小兒科','眼科','耳鼻喉科','泌尿科','皮膚科','神經科','精神科','復健科','家醫科','急診','腫瘤醫學科','醫技系','護理系','物治系','職治系','臨藥所','基醫所','行醫所','分醫所','臨醫所','口醫所','健康照護所','老年所','藥學系','食安所','放射科','附設醫院'];
+	sectors[9]=['水工所','永續所','人社中心','研究總中心','肌肉骨骼研究中心','航太中心','能策中心','前瞻醫療器材科技中心','跨維綠能材料研究中心','生物科技中心','國際傷口修復與再生中心','前瞻蝦類養殖國際研發中心','性別與婦女研究中心','越南研究中心','生醫材料研究中心','運動科學與高齡健康產業中心','電機、資訊科技及人文研發中心','精準生物醫學研究中心','再生醫學卓越研究中心','醫療效益研究中心','漁船及船舶中心','腦心智健康與發展研究中心','國家藥政法規研究中心','國際水質研究中心','衛星資訊研究中心','工程中心'];
+	sectors[10]=['體育室','師資培育中心'];
+		function changeCollege(index){
+		var Sinner="";
+		for(var i=0;i<sectors[index].length;i++){
+			Sinner=Sinner+'<option value='+i+'>'+sectors[index][i]+'</option>';
+		}
+		var sectorSelect=document.getElementById("unitValue");
+		sectorSelect.innerHTML=Sinner;
+	}
+	changeCollege(document.getElementById("deparValue").selectedIndex);
+</script>
+<script type="text/javascript" src="./index1.js"></script>
+  
+<script src='jquery.js?ver=1.12.4'>
+  if (typeof $ == 'undefined') {
+	var $ = jQuery;
+  }
+  </script>
+</body>
+</html>
