@@ -111,6 +111,18 @@ p.footer a:hover {
 	font-size:15px;	
 	color:#ccc;
 }
+.main h6 {
+	color: #1d009e;
+	background: #02c912 ;
+	margin-bottom: 8px;
+	font-size:19px;
+    font-family: 'Josefin Slab', serif;
+    font-weight: 600;
+}
+.main h6 span{
+	font-size:15px;	
+	color:#ccc;
+}
 .main form input[type="text"]:hover,  .main textarea:hover{
 	border: 1px solid #4cc2c4;
 	color:#000;
