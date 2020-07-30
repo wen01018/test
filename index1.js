@@ -1,3 +1,18 @@
+function showexvod(){
+  document.getElementById("exvod").style.display="inline";
+}
+
+function hidexvod(){
+  document.getElementById("exvod").style.display="none";
+}
+
+function showovod(){
+  document.getElementById("wovod").style.display="inline";
+}
+
+function hidewovod(){
+  document.getElementById("wovod").style.display="none";
+}
 let sendButton = document.querySelector('button');
 
 function getDepart(depar){

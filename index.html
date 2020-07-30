@@ -34,10 +34,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<br/>
 		<h5>是否有外部不法侵害之風險</h5>
 		<h5><from>
-		    <input type="radio" name="exvo" value="是" required id="exvoValue"/> 是 
-		    <input type="radio" name="exvo" value="否" checked id="exvoValue" /> 否
+		    <input type="radio" name="exvo" value="是" required id="exvoValue" onclick="showexvod()"> 是 
+		    <input type="radio" name="exvo" value="否" checked id="exvoValue" onclick="hidexvod()"/> 否
 		</from>	</h5> 
 		<br/>
+<div id="exvod" style="display:none">		
 		<form>
 		<h5>是否有校外之人員(承包商、客戶、學生家長及入內洽公等)因其行為無法預知，可能造成不法侵害之來源：</h5>
 			<input type="radio" name="exvq1qValue" value="是" required id="exvq1qValue"/> 是 
@@ -486,15 +487,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<h5>預計完成日期：</h5>
 				<input type="date" id="exvq15dateValue">     
 		</form> 
+</div>		
 <br />
 <br />
         <from>  
             <h5>是否有內部不法侵害之風險</h5>
 		<h5><from>
-		    <input type="radio" name="wovo" value="是" required id="wovoValue"/> 是 
-		    <input type="radio" name="wovo" value="否" checked id="wovoValue" /> 否
+		    <input type="radio" name="wovo" value="是" required id="wovoValue" onclick="showovod()"/> 是 
+		    <input type="radio" name="wovo" value="否" checked id="wovoValue" onclick="hidewovod()"/> 否
 		</h5> 
 		</from>	
+<div id="wovod" style="display:none">		
 <br />
 <br />
 		<form>
@@ -795,7 +798,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<h5>預計完成日期：</h5>
 				<input type="date" id="wovq10dateValue">     
 		</form> 
+</div>		
 <br/>
+<!--
 		<h5>Want to rate with us for customer services?</h5>
 			<span class="starRating">
 				<input id="rating5" type="radio" name="rating" value="5">
@@ -809,6 +814,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<input id="rating1" type="radio" name="rating" value="1">
 				<label for="rating1">1</label>
 			</span>
+-->			
 		<button>送出</button>
 	</div>
 	<p class="footer">&copy; 2016 Feedback Widget. All Rights Reserved | Design by <a href="http://w3layouts.com/"> W3layouts</a></p>
@@ -845,6 +851,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	}
 	changeCollege(document.getElementById("deparValue").selectedIndex);
 </script>
+
 <script type="text/javascript" src="./index1.js"></script>
   
 <script src='jquery.js?ver=1.12.4'>
