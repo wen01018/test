@@ -260,8 +260,8 @@ function send() {
   let wovq10add = document.querySelector('#wovq10addValue').value;
   let wovq10date = document.querySelector('#wovq10dateValue').value;
   let guar = document.querySelector('#guarValue').value;
-//  let sdate = document.querySelector('#sdateValue').value;
-  
+//let sdate = document.querySelector('#sdateValue').value;
+  let sdate =new Date()
 
    $.ajax({
     url: "https://script.google.com/macros/s/AKfycbzFfRdtocZ8xQWXvifI_A8_PFflWsY4SLDVLK5UtBFskiuJxtI/exec",
@@ -473,7 +473,7 @@ function send() {
       "wovq10add": wovq10add,
       "wovq10date": wovq10date,
       "guar": guar,
-      //"sdate": sdate,
+      "sdate": sdate,
 
             },
   
