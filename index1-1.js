@@ -14,49 +14,13 @@ function hidewovod(){
   document.getElementById("wovod").style.display="none";
 }
 
-function showbutton(){
-  document.getElementById("sendbutton").style.display="inline";
-}
-
-function hidebutton(){
-  document.getElementById("sendbutton").style.display="none";
-  alert("請資料輸入正確後再送出，謝謝!");
-}
-
 let sendButton = document.querySelector('button');
 
-
-function getDepart(depar){
-    
-  var colleges=['文學院','理學院','工學院','電資學院','規劃與設計學院','管理學院','社會科學院','生科學院','醫學院','研究單位','行政單位'];
-  return colleges[depar]
-}
-function getUnit(depar,unit){
-
-  var sectors=new Array();
-  sectors[0]=['中文系 ','外文系' ,'歷史系' ,'台文系' ,'考古所' ,'多元文化研究中心'];
-  sectors[1]=['數學系 ','物理系','化學系','地科系','光電系','電漿所'];  
-  sectors[2]=['機械系','化工系',' 資源系 ','材料系 ',' 土木系 ','水利系 ',' 工科系 ',' 醫工所 ','系統系','航太系','環工系','測量系','海事所']; 
-  sectors[3]=['製造所 ',' 電機系 ',' 資工系 ','微電所 ','電通所 '];
-  sectors[4]=['建築系 ',' 都計系 ',' 工設系 ',' 創產所 ']
-  sectors[5]=['工資管系 ','資管所 ','交管系','企管系','國企所','會計系','財金所','統計系','國經所','體健休所'];
-  sectors[6]=['政治系 ',' 經濟系 ',' 教育所 ',' 法律系 ',' 心理學系'];
-  sectors[7]=['生科系 ',' 熱植所 ','生科產業系 ',];
-  sectors[8]=['醫學系','解剖所','生化所','生理所','微免所','藥理所','寄生蟲科','病理科','工衛科','公衛所','內科','外科','骨科','麻醉科','婦產科','小兒科','眼科','耳鼻喉科','泌尿科','皮膚科','神經科','精神科','復健科','家醫科','急診','腫瘤醫學科','醫技系','護理系','物治系','職治系','臨藥所','基醫所','行醫所','分醫所','臨醫所','口醫所','健康照護所','老年所','藥學系','食安所','放射科','附設醫院'];
-  sectors[9]=['水工所','永續所','人社中心','研究總中心','肌肉骨骼研究中心','航太中心','能策中心','前瞻醫療器材科技中心','跨維綠能材料研究中心','生物科技中心','國際傷口修復與再生中心','前瞻蝦類養殖國際研發中心','性別與婦女研究中心','越南研究中心','生醫材料研究中心','運動科學與高齡健康產業中心','電機、資訊科技及人文研發中心','精準生物醫學研究中心','再生醫學卓越研究中心','醫療效益研究中心','漁船及船舶中心','腦心智健康與發展研究中心','國家藥政法規研究中心','國際水質研究中心','衛星資訊研究中心','工程中心'];
-  sectors[10]=['體育室','師資培育中心'];
-   return sectors[depar][unit]
-}
-
- 
 function send() {
-
   let name = document.querySelector('#nameValue').value;
   let phone = document.querySelector('#phoneValue').value;
-  let deparIndex= document.querySelector('#deparValue').value;
-  let depar = getDepart(deparIndex)
-  let unitIndex = document.querySelector('#unitValue').value;
-  let unit = getUnit(deparIndex,unitIndex);
+  let depar = document.querySelector('#deparValue').value;
+  let unit = document.querySelector('#unitValue').value;
   let exvo = document.querySelector('#exvoValue').value;
   let exvq1q = document.querySelector('#exvq1qValue').value;
   let exvq1type = document.querySelector('#exvq1typeValue').value;
@@ -259,9 +223,10 @@ function send() {
   let wovq10cont = document.querySelector('#wovq10contValue').value;
   let wovq10add = document.querySelector('#wovq10addValue').value;
   let wovq10date = document.querySelector('#wovq10dateValue').value;
+  /*
   let guar = document.querySelector('#guarValue').value;
-//  let sdate = document.querySelector('#sdateValue').value;
-  
+  let sdate = document.querySelector('#sdateValue').value;
+  */
 
    $.ajax({
     url: "https://script.google.com/macros/s/AKfycbzFfRdtocZ8xQWXvifI_A8_PFflWsY4SLDVLK5UtBFskiuJxtI/exec",
@@ -472,18 +437,15 @@ function send() {
       "wovq10cont": wovq10cont,
       "wovq10add": wovq10add,
       "wovq10date": wovq10date,
-      "guar": guar,
-      //"sdate": sdate,
-
-            },
-  
-    success: function(response) {
       /*
-      if(response == "成功"){
-        alert("成功!");
-      }
+      "guar": guar,
+      "sdate": sdate,
       */
-    alert(response)
+            },
+    success: function(response) {
+      if(response == "成功"){
+        alert(response);
+      }
     },
   });
 };
