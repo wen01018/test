@@ -751,7 +751,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
             <h5>本人保証以上內容之正確</h5>
 				<input type="radio" name="guar" value="是" required id="guarValue" onclick="showbutton()"> 是 
-				<input type="radio" name="guar" value="否" checked id="guarValue" onclick="hidebutton()"/> 否  
+				<input type="radio" name="guar" value="否" id="guarValue" onclick="hidebutton()"/> 否  
 			
 <br/>
 <!--
@@ -772,12 +772,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <br/>
 
     <div id="sendbutton" style="display:none">	
-		<button>送出</button>
+		<button >送出</button>
 	</div>		
 </div>
 	<p class="footer">&copy; 2016 Feedback Widget. All Rights Reserved | Design by <a href="http://w3layouts.com/"> W3layouts</a></p>
 </div>
 <script type="text/javascript">
+    //雙層連動下拉式選單
 	var colleges=['文學院','理學院','工學院','電資學院','規劃與設計學院','管理學院','社會科學院','生科學院','醫學院','研究單位','行政單位'];
 	var collegeSelect=document.getElementById("deparValue");
 	var inner="";

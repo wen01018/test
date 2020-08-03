@@ -1,23 +1,24 @@
+//外部不法侵害之風險項目顯示
 function showexvod(){
   document.getElementById("exvod").style.display="inline";
 }
-
+//外部不法侵害之風險項目隱藏
 function hidexvod(){
   document.getElementById("exvod").style.display="none";
 }
-
+//內部不法侵害之風險項目顯示
 function showovod(){
   document.getElementById("wovod").style.display="inline";
 }
-
+//內部不法侵害之風險項目隱藏
 function hidewovod(){
   document.getElementById("wovod").style.display="none";
 }
-
+//保証內容正確後顯示送出按鍵
 function showbutton(){
   document.getElementById("sendbutton").style.display="inline";
 }
-
+//內容不正確之提示警告
 function hidebutton(){
   document.getElementById("sendbutton").style.display="none";
   alert("請資料輸入正確後再送出，謝謝!");
@@ -25,7 +26,7 @@ function hidebutton(){
 
 let sendButton = document.querySelector('button');
 
-
+//部門/學院、單位/系所 回傳數字改為值
 function getDepart(depar){
     
   var colleges=['文學院','理學院','工學院','電資學院','規劃與設計學院','管理學院','社會科學院','生科學院','醫學院','研究單位','行政單位'];
@@ -50,7 +51,8 @@ function getUnit(depar,unit){
 
  
 function send() {
-  document.getElementById("sendbutton").style.display="none";
+  
+  document.getElementById("sendbutton").style.display="none"; //按下送出按鍵後隱藏 
   let name = document.querySelector('#nameValue').value;
   let phone = document.querySelector('#phoneValue').value;
   let deparIndex= document.querySelector('#deparValue').value;
@@ -660,7 +662,7 @@ function send() {
       }
       */
     alert(response)
-    document.getElementById("sendbutton").style.display="inline";
+    document.getElementById("sendbutton").style.display="inline"; //按下送出按鍵後收到回傳顯示 按鍵
     },
   });
 };
