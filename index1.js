@@ -292,7 +292,7 @@ function send() {
   let wovq1sev = document.querySelector('#wovq1sevValue').value;
   let wovq1risk = document.querySelector('#wovq1riskValue').value;
   */
-  let wovo = $('input:radio:checked[name="wovoValue"]').val(); 
+  let wovo = $('input:radio:checked[name="wovo"]').val(); 
  let wovq1q = $('input:radio:checked[name="wovq1qValue"]').val(); 
  let wovq1type = $('input:radio:checked[name="wovq1typeValue"]').val(); 
  let wovq1poss = $('input:radio:checked[name="wovq1possValue"]').val(); 
