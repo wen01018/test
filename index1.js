@@ -50,7 +50,7 @@ function getUnit(depar,unit){
 
  
 function send() {
-
+  document.getElementById("sendbutton").style.display="none";
   let name = document.querySelector('#nameValue').value;
   let phone = document.querySelector('#phoneValue').value;
   let deparIndex= document.querySelector('#deparValue').value;
@@ -660,6 +660,7 @@ function send() {
       }
       */
     alert(response)
+    document.getElementById("sendbutton").style.display="inline";
     },
   });
 };
